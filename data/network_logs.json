@@ -1,0 +1,152 @@
+[
+  {
+    "id": "log_001",
+    "timestamp": "2024-01-15T08:23:11Z",
+    "device": "router-R17",
+    "event_type": "packet_drop",
+    "severity": "high",
+    "message": "Router R17 packet drop rate increased to 18% on interface GigabitEthernet0/1",
+    "metrics": {"packet_drop_rate": 0.18, "cpu_usage": 0.72, "memory_usage": 0.65},
+    "tags": ["packet_loss", "routing", "R17"]
+  },
+  {
+    "id": "log_002",
+    "timestamp": "2024-01-15T08:24:05Z",
+    "device": "router-R17",
+    "event_type": "routing_loop",
+    "severity": "critical",
+    "message": "Routing loop detected on router R17 – OSPF adjacency flapping between R17 and R22",
+    "metrics": {"ospf_flap_count": 14, "convergence_time_ms": 3400},
+    "tags": ["ospf", "routing_loop", "R17", "R22"]
+  },
+  {
+    "id": "log_003",
+    "timestamp": "2024-01-15T08:25:30Z",
+    "device": "switch-SW04",
+    "event_type": "latency_spike",
+    "severity": "high",
+    "message": "Network latency spike detected on switch SW04 – average RTT jumped from 4ms to 340ms",
+    "metrics": {"avg_rtt_ms": 340, "baseline_rtt_ms": 4, "jitter_ms": 88},
+    "tags": ["latency", "jitter", "SW04"]
+  },
+  {
+    "id": "log_004",
+    "timestamp": "2024-01-15T08:26:00Z",
+    "device": "router-R17",
+    "event_type": "cpu_high",
+    "severity": "high",
+    "message": "CPU usage on R17 reached 92% – routing table recalculation storm in progress",
+    "metrics": {"cpu_usage": 0.92, "route_table_size": 48200, "recalc_count_per_min": 37},
+    "tags": ["cpu", "routing_table", "R17"]
+  },
+  {
+    "id": "log_005",
+    "timestamp": "2024-01-15T08:27:10Z",
+    "device": "firewall-FW01",
+    "event_type": "connection_timeout",
+    "severity": "medium",
+    "message": "Firewall FW01 reporting elevated TCP connection timeouts – 1240 timeouts in last 60s",
+    "metrics": {"tcp_timeout_count": 1240, "established_connections": 8700},
+    "tags": ["firewall", "tcp", "timeout", "FW01"]
+  },
+  {
+    "id": "log_006",
+    "timestamp": "2024-01-15T08:28:00Z",
+    "device": "router-R22",
+    "event_type": "bgp_reset",
+    "severity": "critical",
+    "message": "BGP session reset on R22 with peer 10.0.1.17 – hold timer expired",
+    "metrics": {"bgp_hold_timer_ms": 90000, "prefixes_withdrawn": 320},
+    "tags": ["bgp", "R22", "session_reset", "R17"]
+  },
+  {
+    "id": "log_007",
+    "timestamp": "2024-01-15T08:29:15Z",
+    "device": "switch-SW04",
+    "event_type": "port_flap",
+    "severity": "medium",
+    "message": "Port flapping detected on SW04 port Gi0/24 – 8 state changes in 90 seconds",
+    "metrics": {"flap_count": 8, "interval_sec": 90},
+    "tags": ["port_flap", "SW04", "physical_layer"]
+  },
+  {
+    "id": "log_008",
+    "timestamp": "2024-01-15T08:30:00Z",
+    "device": "router-R17",
+    "event_type": "memory_exhaustion",
+    "severity": "high",
+    "message": "Memory utilization on R17 at 89% – routing process consuming excess memory due to duplicate route entries",
+    "metrics": {"memory_usage": 0.89, "duplicate_routes": 142},
+    "tags": ["memory", "routing", "R17", "duplicate_routes"]
+  },
+  {
+    "id": "log_009",
+    "timestamp": "2024-01-15T08:31:00Z",
+    "device": "dns-server-01",
+    "event_type": "resolution_failure",
+    "severity": "medium",
+    "message": "DNS resolution failures spiking – 67% query failure rate due to upstream connectivity loss",
+    "metrics": {"query_failure_rate": 0.67, "total_queries_per_min": 2400},
+    "tags": ["dns", "resolution", "connectivity"]
+  },
+  {
+    "id": "log_010",
+    "timestamp": "2024-01-15T08:32:00Z",
+    "device": "load-balancer-LB02",
+    "event_type": "backend_unhealthy",
+    "severity": "high",
+    "message": "Load balancer LB02 marking 3 of 5 backend servers as unhealthy – health checks failing",
+    "metrics": {"healthy_backends": 2, "total_backends": 5, "check_interval_sec": 10},
+    "tags": ["load_balancer", "health_check", "LB02"]
+  },
+  {
+    "id": "log_011",
+    "timestamp": "2024-01-15T08:33:20Z",
+    "device": "router-R17",
+    "event_type": "interface_error",
+    "severity": "high",
+    "message": "High CRC error rate on R17 interface GigabitEthernet0/2 – possible physical layer issue",
+    "metrics": {"crc_errors_per_min": 560, "input_errors": 1340},
+    "tags": ["crc", "interface_error", "R17", "physical_layer"]
+  },
+  {
+    "id": "log_012",
+    "timestamp": "2024-01-15T08:34:00Z",
+    "device": "switch-SW04",
+    "event_type": "spanning_tree",
+    "severity": "critical",
+    "message": "Spanning tree topology change detected on SW04 – STP reconvergence causing temporary broadcast storm",
+    "metrics": {"stp_tc_count": 22, "broadcast_rate_pps": 45000},
+    "tags": ["spanning_tree", "stp", "broadcast_storm", "SW04"]
+  },
+  {
+    "id": "log_013",
+    "timestamp": "2024-01-15T08:35:00Z",
+    "device": "router-R05",
+    "event_type": "normal",
+    "severity": "info",
+    "message": "Router R05 operating normally – all interfaces up, routing table stable",
+    "metrics": {"cpu_usage": 0.12, "memory_usage": 0.34, "packet_drop_rate": 0.0},
+    "tags": ["normal", "R05"]
+  },
+  {
+    "id": "log_014",
+    "timestamp": "2024-01-15T08:36:00Z",
+    "device": "vpn-gateway-VG01",
+    "event_type": "tunnel_down",
+    "severity": "critical",
+    "message": "VPN tunnel down on VG01 – IKE phase 2 negotiation failed with remote peer 203.0.113.45",
+    "metrics": {"tunnel_uptime_sec": 0, "ike_retries": 5},
+    "tags": ["vpn", "ike", "tunnel_down", "VG01"]
+  },
+  {
+    "id": "log_015",
+    "timestamp": "2024-01-15T08:37:00Z",
+    "device": "router-R17",
+    "event_type": "ospf_restart",
+    "severity": "info",
+    "message": "OSPF process restarted on R17 – network stabilizing, adjacency forming with R22",
+    "metrics": {"ospf_neighbors": 3, "routes_learned": 48100},
+    "tags": ["ospf", "restart", "recovery", "R17"]
+  }
+]
